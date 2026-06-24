@@ -696,4 +696,29 @@ const sales=[
  {f:'🇺🇸',w:'Golden Chicken',a:'se unió a Facilita IA',l:'Dallas, TX'},
  {f:'🇨🇴',w:'Juan David',a:'compró un Combo Familiar',l:'Pasto'},
  {f:'🇺🇸',w:'Pollos Express',a:'agendó una demo',l:'Atlanta, GA'},
- {f:'🇨🇴',w:'
+ {f:'🇨🇴',w:'Sofía',a:'pidió papas + pollo',l:'Montería'},
+ {f:'🇨🇴',w:'La Granja',a:'activó su IA',l:'Bogotá'},
+ {f:'🇨🇴',w:'Mateo',a:'compró un Combo Pareja',l:'Tunja'},
+ {f:'🇺🇸',w:'Crunchy Bites',a:'se unió a Facilita IA',l:'Newark, NJ'}
+];
+const toast=document.getElementById('saleToast');let si=Math.floor(Math.random()*sales.length);
+function showSale(){
+  const s=sales[si%sales.length];si++;const mins=Math.floor(Math.random()*9)+1;
+  toast.innerHTML='<div class="st-ic">'+s.f+'</div><div class="st-tx"><b>'+s.w+'</b> '+s.a+' <span class="chk">✓</span><br><span>'+s.l+' · hace '+mins+' min</span></div>';
+  toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),4500);
+}
+setTimeout(function loop(){showSale();setTimeout(loop,7000);},3500);
+
+// Oculta pista Valentina
+setTimeout(()=>{var h=document.getElementById('vHint');if(h)h.style.opacity='0';},9000);
+
+// Red de seguridad: si la animación de aparición no se dispara, mostrar TODO el contenido
+setTimeout(function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){el.classList.add('in');});},2500);
+</script>
+
+<!-- ===== ElevenLabs Conversational AI · Valentina (voz en vivo) ===== -->
+<elevenlabs-convai agent-id="agent_9201kvvj8grhexj9f9wh4axev19z"></elevenlabs-convai>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
+</body>
+</html>
