@@ -250,6 +250,26 @@
     *{animation:none!important;transition:none!important}
     .reveal{opacity:1;transform:none}
   }
+
+  /* PLANES */
+  #planes{background:linear-gradient(180deg,#fff,#fff5f6)}
+  .planes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px;align-items:stretch}
+  .plan{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:32px 24px;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(0,0,0,.06);transition:.3s;position:relative}
+  .plan:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(0,0,0,.13)}
+  .plan.pop{border:2px solid var(--rojo);box-shadow:0 22px 55px rgba(228,0,43,.18)}
+  .plan .pop-badge{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--rojo),var(--rojo-bril));color:#fff;font-family:'Bebas Neue',sans-serif;letter-spacing:1.5px;font-size:14px;padding:6px 18px;border-radius:50px;white-space:nowrap}
+  .plan .p-ic{font-size:46px}
+  .plan h3{font-size:30px;margin-top:8px}
+  .plan .p-sub{color:var(--muted);font-size:14px;margin:4px 0 18px;min-height:40px}
+  .plan .p-price{font-family:'Anton',sans-serif;font-size:46px;color:var(--rojo);line-height:1}
+  .plan .p-price small{font-size:16px;color:var(--text);font-family:'Inter',sans-serif;font-weight:600}
+  .plan .p-annual{font-size:13px;color:var(--muted);margin-top:6px}
+  .plan ul{list-style:none;margin:22px 0;display:flex;flex-direction:column;gap:11px;flex:1}
+  .plan li{display:flex;gap:9px;align-items:flex-start;font-size:14.5px}
+  .plan li::before{content:"\2713";color:#16a34a;font-weight:800}
+  .plan .btn{width:100%;justify-content:center}
+  @media(max-width:880px){.planes-grid{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -483,6 +503,65 @@
     <div class="sedes">
       <div class="sede reveal"><div class="flag">🇨🇴</div><h4>Bogotá, Colombia</h4><p class="lead">Cra. 13 #83-19</p></div>
       <div class="sede reveal"><div class="flag">🇺🇸</div><h4>Valley Stream, New York</h4><p class="lead">89 Ocean Ave, NY 11581</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANES -->
+<section id="planes">
+  <div class="wrap">
+    <div class="center reveal" style="margin-bottom:6px">
+      <div class="eyebrow">PLANES FACILITA IA</div>
+      <h2>El plan perfecto para tu restaurante</h2>
+      <p class="lead center" style="margin-top:12px">Todo incluido: IA en WhatsApp, CRM, pedidos automáticos y campañas. Paga anual y llévate <b class="red">3 meses gratis</b>.</p>
+    </div>
+    <div class="planes-grid">
+      <div class="plan reveal">
+        <div class="p-ic">🚀</div>
+        <h3>Impulsa</h3>
+        <div class="p-sub">Para el restaurante que arranca y quiere automatizar.</div>
+        <div class="p-price">$199.000<small> /mes</small></div>
+        <div class="p-annual">o $1.790.000/año · 3 meses gratis</div>
+        <ul>
+          <li>3 sucursales</li>
+          <li>1.000 contactos</li>
+          <li>IA en WhatsApp (Valentina)</li>
+          <li>CRM + pipeline de pedidos</li>
+          <li>Automatizaciones esenciales</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/573123907526?text=Quiero%20el%20plan%20Impulsa%20de%20Facilita%20IA" target="_blank">Empezar</a>
+      </div>
+      <div class="plan pop reveal">
+        <span class="pop-badge">★ MÁS POPULAR ★</span>
+        <div class="p-ic">⚡</div>
+        <h3>Acelera</h3>
+        <div class="p-sub">Para crecer en ventas con campañas y más sucursales.</div>
+        <div class="p-price">$349.000<small> /mes</small></div>
+        <div class="p-annual">o $3.141.000/año · 3 meses gratis</div>
+        <ul>
+          <li>6 sucursales</li>
+          <li>5.000 contactos</li>
+          <li>Todo lo de Impulsa</li>
+          <li>Campañas de recompra y referidos</li>
+          <li>Agente de voz + reportes</li>
+        </ul>
+        <a class="btn btn-red" href="https://wa.me/573123907526?text=Quiero%20el%20plan%20Acelera%20de%20Facilita%20IA" target="_blank">Empezar ahora</a>
+      </div>
+      <div class="plan reveal">
+        <div class="p-ic">👑</div>
+        <h3>Departamento Tech</h3>
+        <div class="p-sub">Para cadenas y franquicias, sin límites.</div>
+        <div class="p-price">$549.000<small> /mes</small></div>
+        <div class="p-annual">o $4.941.000/año · 3 meses gratis</div>
+        <ul>
+          <li>Sucursales ilimitadas</li>
+          <li>Contactos ilimitados</li>
+          <li>Todo lo de Acelera</li>
+          <li>Multicanal: FB, IG, TikTok, Email, SMS</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/573123907526?text=Quiero%20el%20plan%20Departamento%20Tech%20de%20Facilita%20IA" target="_blank">Hablar con asesor</a>
+      </div>
     </div>
   </div>
 </section>
